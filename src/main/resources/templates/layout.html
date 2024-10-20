@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}">Mi Sitio Web</title>
+    <link href="/css/output.css" rel="stylesheet" th:href="@{/css/output.css}">
+</head>
+<body class="min-h-screen flex flex-col">
+
+<!-- Header -->
+<header class="bg-gray-800 text-white p-4 flex justify-between items-center">
+    <div>
+        <h1 class="text-3xl font-bold">Mi Sitio Web</h1>
+    </div>
+    <nav>
+        <a href="/" class="btn btn-primary mx-2">Inicio</a>
+        <a href="/about" class="btn btn-primary mx-2">Acerca</a>
+    </nav>
+</header>
+
+<!-- Contenedor principal con sidebar a la derecha -->
+<div class="flex flex-1">
+    <!-- Contenido principal -->
+    <main class="flex-1 p-6 bg-gray-900 shadow-md border rounded-md m-4">
+        <section layout:fragment="content">
+            <!-- Aquí se insertará el contenido dinámico de cada página -->
+        </section>
+    </main>
+
+    <!-- Sidebar a la derecha -->
+    <aside class="w-1/4 bg-gray-700 p-4 shadow-md border rounded-md m-4">
+        <h2 class="text-xl font-bold mb-4">Barra Lateral</h2>
+        <ul>
+            <li><a href="#" class="block py-2 px-4 bg-green-500 text-white rounded-lg mb-2">Enlace 1</a></li>
+            <li><a href="#" class="block py-2 px-4 bg-green-500 text-white rounded-lg mb-2">Enlace 2</a></li>
+            <li><a href="#" class="block py-2 px-4 bg-green-500 text-white rounded-lg">Enlace 3</a></li>
+        </ul>
+    </aside>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-white p-4 text-center">
+    <p>© 2024 Mi Sitio Web - Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>

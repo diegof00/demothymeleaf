@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html data-theme="light" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Página Principal</title>
+    <link href="/css/output.css" rel="stylesheet" th:href="@{/css/output.css}">
+</head>
+<body>
+<div class="container mx-auto">
+    <h1 class="text-3xl font-bold underline">¡Hola, bienvenido a mi sitio web!</h1>
+    <button class="btn btn-primary mt-5">Botón DaisyUI</button>
+
+    <button onclick="toggleTheme()" class="btn btn-secondary mt-5">Cambiar tema</button>
+</div>
+
+<h1 th:text="${title}"></h1>
+
+<script>
+    function toggleTheme() {
+        console.log("cambiando tema");
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', newTheme);
+    }
+</script>
+</body>
+</html>
