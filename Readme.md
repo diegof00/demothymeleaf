@@ -24,3 +24,6 @@
 ## Check DaisyUI documentation
 ### https://daisyui.com/components/
 
+## Working
+### Run the next command to watch css for changes
+`tailwindcss -i ./src/main/resources/static/css/styles.css -o ./src/main/resources/static/css/output.css --watch`
