@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html data-theme="light" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Página Principal</title>
@@ -15,13 +15,5 @@
 
 <h1 th:text="${title}"></h1>
 
-<script>
-    function toggleTheme() {
-        console.log("cambiando tema");
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', newTheme);
-    }
-</script>
 </body>
 </html>
