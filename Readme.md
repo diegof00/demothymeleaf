@@ -27,3 +27,16 @@
 ## Working
 ### Run the next command to watch css for changes
 `tailwindcss -i ./src/main/resources/static/css/styles.css -o ./src/main/resources/static/css/output.css --watch`
+
+
+## al crear otro proyecto
+npm init -y
+
+npm install tailwindcss daisyui
+
+npx tailwindcss init
+
+
+al copiar y usar este template
+npm cache clean --force
+npm update
